@@ -1,6 +1,6 @@
 {
   "name": "create-keyframe-animation",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Generate CSS keyframe animations in JS",
   "main": "index.js",
   "directories": {
