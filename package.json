@@ -1,0 +1,25 @@
+{
+  "name": "create-keyframe-animation",
+  "version": "0.0.0",
+  "description": "Generate CSS keyframe animations in JS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "standard && node test/"
+  },
+  "author": "Henrik Joreteg <henrik@andyet.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^4.5.4",
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "load-styles": "^2.0.0",
+    "lodash.defaults": "^3.1.2",
+    "native-promisify-if-present": "^1.0.1",
+    "prefixed-event": "^1.0.4",
+    "transform-property": "0.0.1"
+  }
+}
