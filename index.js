@@ -85,7 +85,12 @@ exports.runAnimation = promisify(function (els, opts, cb) {
 
   opts = defaults(opts, found.presets, mainDefaults)
 
+  var ensureAnimationEndWasTriggered = setTimeout(function () {
+      els[0].dispatchEvent(new Event('AnimationEnd'))
+  }, opts.duration + 1000) // add 1000ms is enough for exceptional cases when chrome is frozen.
+
   var animationEnd = function () {
+    clearTimeout(ensureAnimationEndWasTriggered)
     prefixedEvent.remove(els[0], 'AnimationEnd', animationEnd)
     if (opts.resetWhenDone) {
       setAnimationAsTransform(els, {clearAnimations: true})
